@@ -1,20 +1,6 @@
 /*
-    Targets:
-        Implement Sudoku Solver with fixed table
-        Optimise Solver with DFO Algorithm
-        Create different test cases
-        Create blank slate input
-
-    To Do:
-         - Implement a Naive Algorithm of a Sudoku Solver
-            - Missing checkRow() and checkGrid()
-            - Ultimatively impossible to do as it takes too long and JS is a broken fuckery
-        + Implement a BackTracking Algorithm
-
-    Targets:
-        - Make the whole thing fucking readable
-        - Implement visual representation
-        - Improve Algorithm
+    Simple Sudoku solver: Backtracking algorithm
+      by Wilson Tolentino da Silva
 */
 
 class Sudoku {
@@ -101,34 +87,6 @@ class Sudoku {
     }
 }
 
-// class GUI {
-//     constructor() {
-//         this.gridOffset = 40;
-//         this.gridLineLength = 40;
-//     }
-
-//     createGrid() {
-//         for(var i=0; i<9; i++) {
-//             for (var j=0; j<9; j++) {
-//                 rect(i*this.gridOffset, j*this.gridOffset, this.gridLineLength, this.gridLineLength)
-//             }
-//         }
-//     }
-
-    // createSubGrid() {
-    //     for(var i=0; i<3; i++) {
-    //         for(var j=0; j<3; j++) {
-    //             rect(i*this.gridOffset, j*this.gridOffset, )
-    //         }
-    //     }
-    // }
-
-    // main() {
-    //     this.createGrid()
-    //     // this.createSubGrid()
-    // }
-// }
-
 var table = [   [4, 2,   ,  ,  ,  ,  ,  , 9],
                 [ ,  , 6, 7,  ,  ,  , 2,  ],
                 [ , 9,  ,  , 2, 5,  ,  ,  ],
@@ -141,12 +99,10 @@ var table = [   [4, 2,   ,  ,  ,  ,  ,  , 9],
             ];
 
 var newSudoku = new Sudoku(table);
-// var newGUI = new GUI();
 
 function setup() {
     createCanvas(710, 400);
     newSudoku.main()
-    // newGUI.main()
 }
 
 function draw() {
